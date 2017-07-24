@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recursousuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Cedula</th>
+      <th>Libro</th>
+      <th>Idlibro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recursousuarios.each do |recursousuario| %>
+    
+      <tr>
+        <td><%= recursousuario.id %></td>
+        <td><%= recursousuario.email %></td>
+        <td><%= recursousuario.cedula %></td>
+        <td><%= recursousuario.libro %></td>
+        <td><%= recursousuario.idlibro %></td>
+        <td><%= link_to 'Show', recursousuario %></td>
+        <td><%= link_to 'Edit', edit_recursousuario_path(recursousuario) %></td>
+        <td><%= link_to 'Destroy', recursousuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recursousuario', new_recursousuario_path %>

@@ -1,0 +1,223 @@
+  [1m[35m (13.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (296.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (88.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (70.0ms)[0m  [1m[35mCREATE TABLE `recursos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `titulo` varchar(255), `nombre` varchar(255), `editorial` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170724154110')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRecursousuarios (20170724155052)
+  [1m[35m (105.5ms)[0m  [1m[35mCREATE TABLE `recursousuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `cedula` varchar(255), `libro` varchar(255), `idlibro` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170724155052')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-07-24 16:37:19', '2017-07-24 16:37:19')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSHOW CREATE TABLE `recursos`[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'recursos'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW CREATE TABLE `recursousuarios`[0m
+  [1m[35m (26.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'recursousuarios'[0m
+Started GET "/" for 127.0.0.1 at 2017-07-24 11:56:02 -0500
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (31.0ms)
+Completed 200 OK in 715ms (Views: 365.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos_controller" for 127.0.0.1 at 2017-07-24 11:59:38 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActionController::RoutingError (No route matches [GET] "/recursos_controller"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursousuario" for 127.0.0.1 at 2017-07-24 12:01:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recursousuario"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 12:04:13 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 20199ms (Views: 19989.2ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 12:06:43 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (388.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (558.0ms)
+Completed 200 OK in 2555ms (Views: 2356.8ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 12:06:53 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 1360ms (Views: 1217.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 12:08:22 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (27.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (574.5ms)
+Completed 200 OK in 5374ms (Views: 5159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:15:41 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 2547ms (Views: 2310.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:16:51 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 1640ms (Views: 1513.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:18:20 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 1029ms (Views: 905.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:20:12 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 2973ms (Views: 2770.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 14:01:17 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (101.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (469.5ms)
+Completed 200 OK in 5018ms (Views: 4167.0ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 14:01:43 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 4071ms (Views: 3606.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/recurso" for 127.0.0.1 at 2017-07-24 14:02:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recurso"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
